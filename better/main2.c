@@ -5,6 +5,18 @@
 #include <string.h>
 #include <fcntl.h>
 
+int	get_length(char *str)
+{
+	int	length;
+	
+	length = 0;
+	while (*str)
+	{
+		str++;
+		length++;
+	}
+	return (length);
+}
 void	print_ascii(char *printable)
 {
 	int	fd;
@@ -48,16 +60,12 @@ int	main(void)
 	system("clear");
 	while (running)
 	{
-		printf("please type \"s\" to shut down.\n");
-		str = get_next_line(0);
+		printf("please type a character you would like to see.\n");
+		str = get_next_line(0); 
 		system("clear");
-		printf("You typed: %s\n", str);
-		if ((is_str_str(str, "s") == 0))
-		{
-			wizard();
-			break ;	
-		}
-		printf("hoi");
+		printf("You typed: %s", str);
+		str[get_length(str) - 1] = '\0';
+		print_ascii(str);
 		free(str);
 	}
 	return (0);
