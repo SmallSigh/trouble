@@ -5,13 +5,18 @@
 #include <string.h>
 #include <fcntl.h>
 
-void	wizard(void)
+void	print_ascii(char *printable)
 {
 	int	fd;
 	char *str;
-
-	fd = open("wizard", 0);
 	
+	fd = open(printable, 0);
+	
+	if (fd == -1)
+	{
+		printf("No file found: %s.\n", printable);
+		return ;
+	}
 	str = get_next_line(fd);
 	while(str)
 	{
@@ -19,6 +24,7 @@ void	wizard(void)
 		free(str);
 		str = get_next_line(fd);
 	}
+	close(fd);
 }
 
 int	is_str_str(const char *str, const char *strstr)
