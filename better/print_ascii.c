@@ -1,15 +1,17 @@
 //#include "small_game.h"
 
-void	print_ascii(char *printable)
+// give path-name as parameter, e.c. "orc", "wizard"
+
+void	print_ascii(char *pathname)
 {
 	int	fd;
 	char *str;
 	
-	fd = open(printable, 0);
+	fd = open(pathname, 0);
 	
 	if (fd == -1)
 	{
-		printf("No file found: %s.\n", printable);
+		printf("No file found: %s.\n", pathname);
 		return ;
 	}
 	str = get_next_line(fd);
