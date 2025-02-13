@@ -25,13 +25,13 @@ void wizard_txt_one(t_player *player)
 
 void first_encounter_txt()
 {
-    ft_printf("Before you lie three altars.\nOne with a book that glows feintly...\n");
+    ft_printf("Before you lie three altars.\n\bOne with a book that glows feintly...\n");
     usleep(130000);
     ft_printf("One with a spike covered in caked up old blood...\n");
     usleep(130000);
     ft_printf("And one with a crystal ball, with an image of the wizard in yellow swimming trunks...\n");
     usleep(130000);
-    ft_printf("Which one do you interact with?\nPress [1] for book, [2] for spike and [3] for wizard!\n");
+    ft_printf("\nWhich one do you interact with?[1] for book\n[2] for spike\n[3] for wizard!\n");
 }
 
 void first_encounter(t_player *player)
