@@ -36,10 +36,11 @@ void first_encounter_txt()
 
 void first_encounter(t_player *player)
 {
-    char *answer_one = NULL;  // Initialize the pointer to NULL
-
+    char *answer_one;
+    
+    answer_one = NULL;
     first_encounter_txt();
-    answer_one = get_next_line(0);  // Get the answer from the user
+    answer_one = get_next_line(0);
     if (answer_one && answer_one[0] == '1')
     {
         ft_printf("As you touch the book, it stops glowing...\nBut you start glowing a bit!\n");
@@ -56,7 +57,6 @@ void first_encounter(t_player *player)
     {
         ft_printf("\nYou rub your hand over the crystal ball... the wizard smiles at you, he is on holiday...\n");
     }
-
-    free(answer_one);  // Don't forget to free the allocated memory for the answer
+    free(answer_one);
 }
 

@@ -9,7 +9,6 @@ t_player *player_init(void)
         ft_printf("Memory allocation failed.\n");
         exit(EXIT_FAILURE);
     }
-
     player->health = 10;
     player->strength = 2;
     player->magic = 0;
@@ -26,7 +25,7 @@ int main(void)
 
     player = player_init();
     first_encounter(player);
-    // player = second_encounter();
+    // second_encounter(player);
     free(player->name);
     free(player);
     return 0;
