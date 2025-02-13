@@ -30,7 +30,7 @@ int	ft_print_integer(long int n)
 	int		len;
 
 	len = 0;
-	len = ft_len(n);
+	len = print_len(n);
 	if (n == -2147483648)
 	{
 		ft_print_normalstring("-2147483648");

@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "./get_next_line.h"
 
 size_t	ft_strlen(const char *s1)
 {
@@ -22,7 +22,7 @@ size_t	ft_strlen(const char *s1)
 	return (a);
 }
 
-char	*ft_strchr(const char *string, int c)
+char	*ft_strchr_GNL(const char *string, int c)
 {
 	unsigned char	to_find;
 
@@ -40,7 +40,7 @@ char	*ft_strchr(const char *string, int c)
 	return (0);
 }
 
-char	*ft_strjoin(char *s1, char *s2)
+char	*ft_strjoin_GNL(char *s1, char *s2)
 {
 	size_t	i;
 	size_t	j;

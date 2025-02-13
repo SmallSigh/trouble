@@ -1,9 +1,11 @@
 #include <stdio.h>
 #include <unistd.h>
 #include <stdlib.h>
-#include "get_next_line.h"
 #include <string.h>
 #include <fcntl.h>
+
+#include "main_header.h"
+
 
 int	get_length(char *str)
 {

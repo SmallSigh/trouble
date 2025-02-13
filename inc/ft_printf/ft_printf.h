@@ -20,7 +20,7 @@
 # include <limits.h>
 # include <stdint.h>
 
-size_t	ft_len(long int n);
+size_t	print_len(long int n);
 int		ft_print_char(char c);
 int		ft_print_string(va_list arguments);
 int		ft_print_normalstring(char *str);

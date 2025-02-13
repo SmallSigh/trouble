@@ -12,14 +12,14 @@
 
 #include "ft_printf.h"
 
-int	ft_toupper(int c)
+int	print_toupper(int c)
 {
 	if (c >= 'a' && c <= 'z')
 		c = c - 32;
 	return (c);
 }
 
-size_t	ft_len(long int n)
+size_t	print_len(long int n)
 {
 	int	len;
 
@@ -59,10 +59,8 @@ int	ft_print_hex(unsigned int n, char c)
 	int					print_length;
 	char				hex_buffer[32];
 	int					i;
-	int					checker;
 
 	i = 0;
-	checker = 0;
 	print_length = 0;
 	if (n == 0)
 		return (ft_print_char('0'));
@@ -73,7 +71,7 @@ int	ft_print_hex(unsigned int n, char c)
 	}
 	n = i;
 	while (0 < i-- && c == 'X')
-		hex_buffer[i] = ft_toupper(hex_buffer[i]);
+		hex_buffer[i] = print_toupper(hex_buffer[i]);
 	i = n;
 	while (i > 0)
 		print_length += ft_print_char(hex_buffer[--i]);

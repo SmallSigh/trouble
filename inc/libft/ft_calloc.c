@@ -16,10 +16,8 @@
 // memset dont work the same as bzero
 void	*ft_calloc(size_t nmemb, size_t size)
 {
-	size_t			calloc_size;
 	unsigned char	*arr;
 
-	calloc_size = 0;
 	arr = malloc(nmemb * size);
 	if (arr == NULL)
 		return (arr);

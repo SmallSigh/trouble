@@ -28,7 +28,7 @@ char	*empty_bucket(char *bucket)
 		bucket = NULL;
 		return (NULL);
 	}
-	new_bucket = malloc(sizeof(char) * (ft_strlen(bucket) - i));
+	new_bucket = malloc(sizeof(char) * (gnl_strlen(bucket) - i));
 	if (!new_bucket)
 		return (NULL);
 	i++;
@@ -76,7 +76,7 @@ char	*fill_bucket(int fd, char *bucket)
 	buffer = malloc(sizeof(char) * (BUFFER_SIZE + 1));
 	if (!buffer)
 		return (NULL);
-	while (!ft_strchr(bucket, '\n') && (rd_bytes != 0))
+	while (!gnl_strchr(bucket, '\n') && (rd_bytes != 0))
 	{
 		rd_bytes = read(fd, buffer, BUFFER_SIZE);
 		if (rd_bytes == -1)
@@ -87,7 +87,7 @@ char	*fill_bucket(int fd, char *bucket)
 			return (NULL);
 		}
 		buffer[rd_bytes] = '\0';
-		bucket = ft_strjoin(bucket, buffer);
+		bucket = gnl_strjoin(bucket, buffer);
 	}
 	free(buffer);
 	return (bucket);
@@ -113,26 +113,26 @@ char	*get_next_line(int fd)
 	return (aquarium);
 }
 
-int	main(void)
-{
-	int		fd;
-	char	*s;
+// int	main(void)
+// {
+// 	int		fd;
+// 	char	*s;
 
-	fd = open("1.txt", O_RDONLY);
-	if (fd == -1)
-	{
-		perror("file aint open");
-		return (1);
-	}
-	while ((s = get_next_line(fd)) != NULL)
-	{
-		printf("%s", s);
-		free(s);
-	}
-	if (close(fd) == -1)
-	{
-		perror("shit aint closing");
-		return (1);
-	}
-	return (0);
-}
+// 	fd = open("1.txt", O_RDONLY);
+// 	if (fd == -1)
+// 	{
+// 		perror("file aint open");
+// 		return (1);
+// 	}
+// 	while ((s = get_next_line(fd)) != NULL)
+// 	{
+// 		printf("%s", s);
+// 		free(s);
+// 	}
+// 	if (close(fd) == -1)
+// 	{
+// 		perror("shit aint closing");
+// 		return (1);
+// 	}
+// 	return (0);
+// }
