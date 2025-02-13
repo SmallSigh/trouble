@@ -53,22 +53,22 @@ int	is_str_str(const char *str, const char *strstr)
 	return (0);
 }
 
-int	main(void)
-{
-	char	*str;
-	int	running;
+// int	main(void)
+// {
+// 	char	*str;
+// 	int	running;
 
-	running = 1;
-	system("clear");
-	while (running)
-	{
-		printf("please type a character you would like to see.\n");
-		str = get_next_line(0); 
-		system("clear");
-		printf("You typed: %s", str);
-		str[get_length(str) - 1] = '\0';
-		print_ascii(str);
-		free(str);
-	}
-	return (0);
-}
+// 	running = 1;
+// 	system("clear");
+// 	while (running)
+// 	{
+// 		printf("please type a character you would like to see.\n");
+// 		str = get_next_line(0); 
+// 		system("clear");
+// 		printf("You typed: %s", str);
+// 		str[get_length(str) - 1] = '\0';
+// 		print_ascii(str);
+// 		free(str);
+// 	}
+// 	return (0);
+// }

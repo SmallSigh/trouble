@@ -4,4 +4,5 @@
  #include "get_next_line.h"
  #include "libft.h"
  #include "ft_printf.h"
+ #include "player.h"
 #endif
