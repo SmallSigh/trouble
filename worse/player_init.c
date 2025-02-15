@@ -9,10 +9,11 @@ void display_stats(t_player *player)
     ft_printf("---------------------------------------------------\n");
 }
 
-void second_encouinter(t_player player)
+void second_encounter(t_player *player)
 {
-    display_stats;
-    text_two();
+    (void)player;
+    display_stats(player);
+    // text_two();
 }
 
 t_player *player_init(void)
