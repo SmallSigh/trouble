@@ -21,6 +21,7 @@ void wizard_txt_one(t_player *player)
         name = get_next_line(0);
     }
     name[ft_strlen(name) - 1] = '\0';
+    system("clear");
     ft_printf("Hello there %s, I hope you're doing well.\n", name);
     player->stats.name = name;
 }
@@ -33,7 +34,7 @@ void first_encounter_txt()
     usleep(130000);
     ft_printf("And one with a crystal ball, with an image of the wizard in yellow swimming trunks...\n");
     usleep(130000);
-    ft_printf("\nWhich one do you interact with?[1] for book\n[2] for spike\n[3] for wizard!\n");
+    ft_printf("\nWhich one do you interact with?\n\n[1] for book\n[2] for spike\n[3] for wizard!\n");
 }
 
 void first_encounter(t_player *player)
