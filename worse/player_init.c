@@ -56,6 +56,7 @@ int main(void)
 {
 	t_player *player;
 
+	main_screen();
 	system("clear");
 	player = player_init();
 	first_encounter(player);

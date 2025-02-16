@@ -30,6 +30,9 @@ void        autobattle(t_player *player, t_orc *enemy);
 int         my_random(int min, int max);
 const char  *random_word();
 
+int	main_screen(void);
+void	print_ascii(char *pathname);
+
 #endif
 
 // typedef struct s_wizard

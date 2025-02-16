@@ -3,7 +3,7 @@ CC = cc
 CFLAGS = -Wall -Wextra -Werror -g
 
 # Directories
-SRC_DIRS = inc/gnl inc/ft_printf inc/libft inc/src better worse
+SRC_DIRS = inc/gnl inc/ft_printf inc/libft inc/src better worse ascii tools
 INC_DIRS = $(addprefix -I, $(SRC_DIRS))
 OBJ_DIR = o_files
 

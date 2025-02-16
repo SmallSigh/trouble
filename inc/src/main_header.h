@@ -5,5 +5,6 @@
  #include "libft.h"
  #include "ft_printf.h"
  #include "player.h"
+ #include "../tools/tools.h"
  #include <time.h>
 #endif
