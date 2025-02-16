@@ -17,30 +17,35 @@ void  autobattle(t_player *player, t_orc *enemy)
 
     enemy_damage = 0;
     player_damage = 0;
-    display_stats(player);
+    display_stats(&player->stats);
+    display_stats(&enemy->stats);
 
 
-    // flee
+    // flee stats.
     // display_stats 
     // health - strength
     // exit or return
-    while (player->health > 0 && enemy->health > 0)
+    while (player->stats.health > 0 && enemy->stats.health > 0)
     {
         message = random_word();
-        player_damage = my_random((player->strength / 2), (player->strength / 2) + 2);
-        enemy_damage = my_random((enemy->strength / 2), (enemy->strength / 2) + 2);
-        enemy->health -= player_damage;
-        ft_printf("%s hits %s %s!\n\n%i damage!\n", player->name, enemy->name, message, player_damage);
+        player_damage = my_random((player->stats.strength / 2), (player->stats.strength / 2) + 2);
+        enemy_damage = my_random((enemy->stats.strength / 2), (enemy->stats.strength / 2) + 2);
+        enemy->stats.health -= player_damage;
+        ft_printf("%s hits %s %s!\n\n%i damage!\n", player->stats.name, enemy->stats.name, message, player_damage);
+        sleep(1);
+        ft_printf("Enemy health = %i\n", enemy->stats.health);
         sleep(1);
         message = random_word();
-        player->health -= enemy_damage;
-        ft_printf("%s hits %s %s!\n\n%i damage!\n", enemy->name, player->name, message, enemy_damage);
+        player->stats.health -= enemy_damage;
+        ft_printf("%s hits %s %s!\n\n%i damage!\n", enemy->stats.name, player->stats.name, message, enemy_damage);
+        sleep(1);
+        ft_printf("Player health = %i\n", player->stats.health);
         sleep(1);
     }
-    if (player->health > 0)
-        ft_printf("congrats!");
+    if (player->stats.health > 0)
+        ft_printf("\ncongrats!\n");
     else
-        ft_printf("game over!");
-    while (1)
-        pause();
+        ft_printf("\ngame over!\n");
+    sleep(5);
+    exit(1);
 }

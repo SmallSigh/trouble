@@ -1,6 +1,7 @@
 {
     "files.associations": {
         "get_next_line.h": "c",
-        "player.h": "c"
+        "player.h": "c",
+        "main_header.h": "c"
     }
 }

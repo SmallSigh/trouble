@@ -44,7 +44,7 @@ int	main_screen(void)
 	sleep(2);
 	printf("\tYou are asking it as you sit on this couch having done two tabs of acid...\n");
 	sleep(3);
-	printf("\tYou are asking it as you sit on this couch having done two tabs of acid and you still don't feel anything so you decided to smoke a joint\n");
+	printf("\tYou are asking it as you sit on this couch having done two tabs of acid and...\n\tYou still don't feel anything so you decided to smoke a joint\n");
 	sleep(2);
 
 	printf("\n\n\tcause what's the point anyway?\n");

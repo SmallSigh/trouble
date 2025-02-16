@@ -4,11 +4,13 @@ void wizard_txt_one(t_player *player)
 {
     char *name;
 
-    ft_printf("Hello there wanderer, what is your name?\n");
+    ft_printf("You can stay one the couch for this one.\n");
     usleep(1500000);
     ft_printf("Uch!\n");
     usleep(130000);
     ft_printf("Fuck me, I'm old.\n");
+    usleep(1500000);
+    ft_printf("So were gonna go a trip now, what were you called again?\n");
     usleep(1500000);
     ft_printf("Your name:\n");
     name = get_next_line(0);
@@ -20,7 +22,7 @@ void wizard_txt_one(t_player *player)
     }
     name[ft_strlen(name) - 1] = '\0';
     ft_printf("Hello there %s, I hope you're doing well.\n", name);
-    player->name = name;
+    player->stats.name = name;
 }
 
 void first_encounter_txt()
@@ -45,18 +47,20 @@ void first_encounter(t_player *player)
     {
         ft_printf("As you touch the book, it stops glowing...\nBut you start glowing a bit!\n");
         ft_printf("\nYou gain 2 magic!\n");
-        player->magic += 2;
+        player->stats.magic += 2;
     }
     else if (answer_one && answer_one[0] == '2')
     {
         ft_printf("You slam you hand on the spike!\nIt pierces through!\n");
         ft_printf("\n-2 health... Dumbass...\n");
-        player->health -= 2;
+        player->stats.health -= 2;
     }
     else if (answer_one && answer_one[0] == '3')
     {
         ft_printf("\nYou rub your hand over the crystal ball... the wizard smiles at you, he is on holiday...\n");
     }
+    sleep(3);
+    system("clear");
     free(answer_one);
 }
 
