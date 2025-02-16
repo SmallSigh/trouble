@@ -19,7 +19,7 @@ t_orc *orc_init()
 
 	if (!orc)
 		return (NULL);
-	orc->stats.name = ft_strdup("Samuel");
+	orc->stats.name = ft_strdup("Samuel the orc");
 	orc->stats.strength = my_random(3, 8);
 	orc->stats.health = my_random(3, 8);
 	orc->stats.magic = my_random(1, 2);

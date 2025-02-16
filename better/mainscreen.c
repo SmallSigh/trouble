@@ -40,7 +40,7 @@ int	main_screen(void)
 	sleep(1);
 	printf(" Indeed!\n");
 	usleep(750);
-	printf("\tYou are asking it as you sit on this coudh.\n");
+	printf("\tYou are asking it as you sit on this couch.\n");
 	sleep(2);
 	printf("\tYou are asking it as you sit on this couch having done two tabs of acid...\n");
 	sleep(3);
