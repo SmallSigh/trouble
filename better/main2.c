@@ -19,27 +19,6 @@ int	get_length(char *str)
 	}
 	return (length);
 }
-void	print_ascii(char *printable)
-{
-	int	fd;
-	char *str;
-	
-	fd = open(printable, 0);
-	
-	if (fd == -1)
-	{
-		printf("No file found: %s.\n", printable);
-		return ;
-	}
-	str = get_next_line(fd);
-	while(str)
-	{
-		printf("%s", str);
-		free(str);
-		str = get_next_line(fd);
-	}
-	close(fd);
-}
 
 int	is_str_str(const char *str, const char *strstr)
 {

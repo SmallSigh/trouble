@@ -5,4 +5,5 @@
  #include "libft.h"
  #include "ft_printf.h"
  #include "player.h"
+ #include <time.h>
 #endif

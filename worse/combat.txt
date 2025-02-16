@@ -1,0 +1,7 @@
+combat
+auto_battler(*player *enemy);
+display_stat(*player) display_stat(*enemy)
+player->health - rand(enemy->strength / 2)
+enemy->health - rand(player->strength / 2)
+
+update struct and stats per loop
